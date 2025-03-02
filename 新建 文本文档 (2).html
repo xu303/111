@@ -3,155 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>许佳豪 | 高级个人主页</title>
+    <title>自我介绍</title>
     <style>
-        /* 基础重置与优化 */
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-
-        /* 增强型星空背景 */
-        body {
-            font-family: 'Poppins', sans-serif;
-            min-height: 100vh;
-            background: 
-                linear-gradient(45deg, #0a0a27 25%, #1a1a4a 100%),
-                repeating-linear-gradient(45deg, 
-                    rgba(255,255,255,0.1) 0px, 
-                    rgba(255,255,255,0.1) 2px,
-                    transparent 2px,
-                    transparent 4px
-                );
-            background-blend-mode: multiply;
-            color: #fff;
-            overflow-x: hidden;
-            position: relative;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* 全局渐变字体优化 */
-        .gradient-text {
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
-            display: inline-block; /* 修复渐变文本对齐问题 */
-        }
-
-        /* 主容器优化 */
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* 标题动画优化 */
-        .hero-title {
-            font-size: clamp(2.5rem, 8vw, 4.5rem); /* 响应式字体大小 */
-            font-weight: 800;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
             text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-            text-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
-            animation: titleFloat 3s ease-in-out infinite;
         }
-
-        @keyframes titleFloat {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-15px) scale(1.05); }
+        .container h1 {
+            margin-bottom: 20px;
         }
-
-        /* 卡片交互优化 */
-        .profile-card {
-            background: rgba(255, 255, 255, 0.05);
-            -webkit-backdrop-filter: blur(15px);
-            backdrop-filter: blur(15px);
-            border-radius: 2rem;
-            padding: 3rem;
-            margin: 2rem auto;
-            max-width: min(90%, 800px);
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.1),
-                inset 0 0 20px rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.1);
-            transform: perspective(1000px) rotateX(0) rotateY(0);
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .profile-card:hover {
-            transform: 
-                perspective(1000px) 
-                translateY(-10px) 
-                rotateX(3deg) 
-                rotateY(3deg);
-            box-shadow: 
-                0 15px 45px rgba(78, 205, 196, 0.3),
-                inset 0 0 30px rgba(255,255,255,0.2);
-        }
-
-        /* 头像优化 */
-        .avatar {
-            width: clamp(150px, 25vw, 220px);
-            height: clamp(150px, 25vw, 220px);
+        .container img {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            margin: 0 auto 2rem;
-            border: 3px solid;
-            border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4) 1;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.5s;
+            margin-bottom: 20px;
+            object-fit: cover;
         }
-
-        /* 响应式优化 */
-        @media (max-width: 768px) {
-            .profile-card {
-                padding: 2rem;
-                border-radius: 1.5rem;
-            }
-            
-            .content-section p {
-                font-size: 1rem;
-                padding: 0.8rem;
-            }
-        }
-
-        /* 新增打印样式 */
-        @media print {
-            body {
-                background: white !important;
-                color: black !important;
-            }
-            .gradient-text {
-                background: black !important;
-                -webkit-text-fill-color: black !important;
-            }
+        .container p {
+            margin: 10px 0;
+            font-size: 16px;
         }
     </style>
-    <link href="/111/https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 class="hero-title gradient-text">许佳豪</h1>
-        
-        <div class="profile-card">
-            <div class="avatar">
-                <!-- 请确保图片路径正确 -->
-                <img src="C:\dawdadw\555.jpg" alt="许佳豪"width="210" height="210">
-            </div>
-            
-            <div class="content-section gradient-text">
-                <p>🎓 泉州海洋学院工商企业管理专业学生</p >
-                <p>💻 全栈开发爱好者 | 前端艺术家</p >
-                <p>🚀 技术栈：React/Node.js/Python</p >
-                <p>📸 摄影达人 | 🎮 游戏开发者 | 🌍 旅行探险家</p >
-            </div>
-        </div>
-    </div>
+
+<div class="container">
+    <h1>自我介绍</h1>
+    <!-- 图片路径：确保 photo.jpg 文件与 index.html 在同一目录下 -->
+    <img src="C:\dawdadw\555.jpg" alt="个人照片">
+    <p><strong>姓名：</strong>张三</p >
+    <p><strong>优点：</strong>学习能力强，乐于助人</p >
+    <p><strong>缺点：</strong>有时过于追求完美</p >
+    <p><strong>座右铭：</strong>永不放弃！</p >
+</div>
+
 </body>
 </html>
